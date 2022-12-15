@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Proiect_2
 {
-    public partial class Form1 : Form
+    public partial class Meniu : Form
     {
-        public Form1()
+        public Meniu()
         {
             InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
