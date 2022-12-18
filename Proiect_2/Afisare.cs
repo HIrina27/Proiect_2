@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Proiect_2
 {
-    public partial class Adaugare : Form
+    public partial class Afisare : Form
     {
         Thread tr;
-        public Adaugare()
+        public Afisare()
         {
             InitializeComponent();
         }
@@ -25,18 +25,10 @@ namespace Proiect_2
             this.Close();
             tr = new Thread(opennmd);
             tr.Start();
-
-
         }
         private void opennmd(object obj)
         {
-            Application.Run(new Meniu());
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            Application.Run(new AfisareMeniu());
         }
     }
-
 }

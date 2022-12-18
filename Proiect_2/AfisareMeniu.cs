@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace Proiect_2
 {
-    public partial class Adaugare : Form
+    public partial class AfisareMeniu : Form
     {
         Thread tr;
-        public Adaugare()
+        public AfisareMeniu()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             this.Close();
             tr = new Thread(opennmd);
+            //tr.SetApartmentState(ApartmentState.STA);
             tr.Start();
 
 
@@ -31,11 +31,6 @@ namespace Proiect_2
         private void opennmd(object obj)
         {
             Application.Run(new Meniu());
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 

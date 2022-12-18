@@ -40,7 +40,7 @@ namespace Proiect_2
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaShell;
+            this.button1.BackColor = System.Drawing.Color.SandyBrown;
             this.button1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.Location = new System.Drawing.Point(75, 156);
             this.button1.Name = "button1";
@@ -48,21 +48,23 @@ namespace Proiect_2
             this.button1.TabIndex = 0;
             this.button1.Text = "Adaugare";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaShell;
+            this.button2.BackColor = System.Drawing.Color.NavajoWhite;
             this.button2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(267, 237);
+            this.button2.Location = new System.Drawing.Point(246, 239);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 54);
             this.button2.TabIndex = 1;
             this.button2.Text = "Tranzactie";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.SeaShell;
+            this.button3.BackColor = System.Drawing.Color.Bisque;
             this.button3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button3.Location = new System.Drawing.Point(75, 332);
             this.button3.Name = "button3";
@@ -74,14 +76,15 @@ namespace Proiect_2
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.SeaShell;
+            this.button4.BackColor = System.Drawing.Color.SandyBrown;
             this.button4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(241, 409);
+            this.button4.Location = new System.Drawing.Point(247, 407);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(163, 60);
             this.button4.TabIndex = 3;
             this.button4.Text = "Stergere";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -114,8 +117,10 @@ namespace Proiect_2
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Meniu";
             this.Text = "Meniu";
+            this.Load += new System.EventHandler(this.Meniu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

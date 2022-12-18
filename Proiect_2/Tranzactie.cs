@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Proiect_2
 {
-    public partial class Adaugare : Form
+    public partial class Tranzactie : Form
     {
-        Thread tr;
-        public Adaugare()
+        Thread  tr;
+        public Tranzactie()
         {
             InitializeComponent();
         }
@@ -33,10 +33,9 @@ namespace Proiect_2
             Application.Run(new Meniu());
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
     }
-
 }

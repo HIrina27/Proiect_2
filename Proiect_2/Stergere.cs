@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Proiect_2
 {
-    public partial class Adaugare : Form
+    public partial class Stergere : Form
     {
         Thread tr;
-        public Adaugare()
+        public Stergere()
         {
             InitializeComponent();
         }
@@ -24,6 +24,7 @@ namespace Proiect_2
 
             this.Close();
             tr = new Thread(opennmd);
+            //tr.SetApartmentState(ApartmentState.STA);
             tr.Start();
 
 
@@ -32,11 +33,5 @@ namespace Proiect_2
         {
             Application.Run(new Meniu());
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
-
 }

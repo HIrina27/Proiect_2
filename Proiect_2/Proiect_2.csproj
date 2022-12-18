@@ -52,6 +52,18 @@
     <Compile Include="Adaugare.Designer.cs">
       <DependentUpon>Adaugare.cs</DependentUpon>
     </Compile>
+    <Compile Include="Afisare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Afisare.Designer.cs">
+      <DependentUpon>Afisare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AfisareMeniu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AfisareMeniu.Designer.cs">
+      <DependentUpon>AfisareMeniu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Meniu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,8 +77,26 @@
       <DependentUpon>ProiectPBDDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stergere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stergere.Designer.cs">
+      <DependentUpon>Stergere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tranzactie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tranzactie.Designer.cs">
+      <DependentUpon>Tranzactie.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Adaugare.resx">
       <DependentUpon>Adaugare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Afisare.resx">
+      <DependentUpon>Afisare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AfisareMeniu.resx">
+      <DependentUpon>AfisareMeniu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Meniu.resx">
       <DependentUpon>Meniu.cs</DependentUpon>
@@ -80,6 +110,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Stergere.resx">
+      <DependentUpon>Stergere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tranzactie.resx">
+      <DependentUpon>Tranzactie.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ProiectPBDDataSet.xsc">
       <DependentUpon>ProiectPBDDataSet.xsd</DependentUpon>
     </None>
