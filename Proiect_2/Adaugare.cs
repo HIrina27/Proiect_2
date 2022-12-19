@@ -47,16 +47,22 @@ namespace Proiect_2
 
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N4DCGIN;Initial Catalog=ProiectPBD;Integrated Security=True");
         SqlCommand command;
+        int ok = 0,ok1=0;
 
         private void button2_Click(object sender, EventArgs e)
         {
-            con.Open();
-            command = new SqlCommand("Insert into dbo.Contul values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "') ");
-            command.Connection = con;
-            command.ExecuteNonQuery();
-            MessageBox.Show("Inserat cu succes.");
-            con.Close();
-            BindData();
+            if ((ok == 1)||(ok1==1))
+                MessageBox.Show("Nu se poate face adaugarea");
+            else
+            {
+                con.Open();
+                command = new SqlCommand("Insert into dbo.Contul values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + textBox5.Text + "') ");
+                command.Connection = con;
+                command.ExecuteNonQuery();
+                MessageBox.Show("Inserat cu succes.");
+                con.Close();
+                BindData();
+            }
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
@@ -85,33 +91,48 @@ namespace Proiect_2
                 errorProvider2.SetError(textBox1, "Numar cont lipsa");
             }
             else
+            if (int.Parse(textBox1.Text) > 99999)
+            {
+                MessageBox.Show("Numarul contului nu este valid!");
+                ok = 1;
+            }
+            else
             {
                 e.Cancel = false;
                 errorProvider2.SetError(textBox1, "");
+                ok = 0;
             }
         }
 
         private void textBox2_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            string var = textBox2.Text;
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
             {
                 e.Cancel = true;
-                textBox1.Focus();
+                textBox2.Focus();
                 errorProvider1.SetError(textBox2, "Tip cont lipsa!");
+            }
+            else
+                if (var.Length != 2)
+            {
+                MessageBox.Show("Tipul contului  nu este valid!");
+                ok1 = 1;
             }
             else
             {
                 e.Cancel = false;
                 errorProvider1.SetError(textBox2, "");
+                ok1 = 0;
             }
         }
 
         private void textBox3_Validating (object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
             {
                 e.Cancel = true;
-                textBox1.Focus();
+                textBox3.Focus();
                 errorProvider3.SetError(textBox3, "Sold initial lispa!");
             }
             else
@@ -123,10 +144,10 @@ namespace Proiect_2
 
         private void textBox4_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (string.IsNullOrWhiteSpace(textBox4.Text))
             {
                 e.Cancel = true;
-                textBox1.Focus();
+                textBox4.Focus();
                 errorProvider4.SetError(textBox4, "Sold actual lispa!");
             }
             else
@@ -138,12 +159,15 @@ namespace Proiect_2
 
         private void textBox5_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            string var = textBox5.Text;
+            if (string.IsNullOrWhiteSpace(textBox5.Text))
             {
                 e.Cancel = true;
-                textBox1.Focus();
+                textBox5.Focus();
                 errorProvider5.SetError(textBox5, "Descrierea lipseste !!");
-            }
+            }else
+            if (var.Length > 50)
+                MessageBox.Show("Descriere prea lunga !!");
             else
             {
                 e.Cancel = false;
@@ -154,6 +178,11 @@ namespace Proiect_2
         private void button5_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
