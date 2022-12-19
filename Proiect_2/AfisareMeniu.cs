@@ -94,7 +94,7 @@ namespace Proiect_2
 
         private void button4_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("select * from Contul where TipCont = '" + textBox3.Text + "'", con);
+            SqlCommand command = new SqlCommand("select * from Contul where TpCont = '" + textBox3.Text + "'", con);
             DataTable dt = new DataTable();
             SqlDataAdapter sd = new SqlDataAdapter(command);
             sd.Fill(dt);
@@ -127,7 +127,7 @@ namespace Proiect_2
 
         private void button6_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand(" select* from Tranzactii where ContDebitar = (select MAX() from Tranzactii)" , con);
+            SqlCommand command = new SqlCommand(" select* from dbo.Tranzactii where ContDebitar = (select MAX(ContDebitar) from dbo.Tranzactii)" , con);
             DataTable dt = new DataTable();
             SqlDataAdapter sd = new SqlDataAdapter(command);
             sd.Fill(dt);
