@@ -632,6 +632,8 @@ namespace Proiect_2 {
             
             private global::System.Data.DataColumn columnDescriereTranz;
             
+            private global::System.Data.DataColumn columnNumarTranzactie;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public TranzactiiDataTable() {
@@ -707,6 +709,14 @@ namespace Proiect_2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NumarTranzactieColumn {
+                get {
+                    return this.columnNumarTranzactie;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -742,14 +752,15 @@ namespace Proiect_2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TranzactiiRow AddTranzactiiRow(decimal ContDebitar, decimal ContCreditor, int Suma, System.DateTime Data, string DescriereTranz) {
+            public TranzactiiRow AddTranzactiiRow(decimal ContDebitar, decimal ContCreditor, int Suma, System.DateTime Data, string DescriereTranz, int NumarTranzactie) {
                 TranzactiiRow rowTranzactiiRow = ((TranzactiiRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ContDebitar,
                         ContCreditor,
                         Suma,
                         Data,
-                        DescriereTranz};
+                        DescriereTranz,
+                        NumarTranzactie};
                 rowTranzactiiRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTranzactiiRow);
                 return rowTranzactiiRow;
@@ -777,6 +788,7 @@ namespace Proiect_2 {
                 this.columnSuma = base.Columns["Suma"];
                 this.columnData = base.Columns["Data"];
                 this.columnDescriereTranz = base.Columns["DescriereTranz"];
+                this.columnNumarTranzactie = base.Columns["NumarTranzactie"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -792,6 +804,8 @@ namespace Proiect_2 {
                 base.Columns.Add(this.columnData);
                 this.columnDescriereTranz = new global::System.Data.DataColumn("DescriereTranz", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescriereTranz);
+                this.columnNumarTranzactie = new global::System.Data.DataColumn("NumarTranzactie", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumarTranzactie);
                 this.columnSuma.AllowDBNull = false;
                 this.columnDescriereTranz.MaxLength = 10;
             }
@@ -1115,6 +1129,22 @@ namespace Proiect_2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int NumarTranzactie {
+                get {
+                    try {
+                        return ((int)(this[this.tableTranzactii.NumarTranzactieColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NumarTranzactie\' in table \'Tranzactii\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTranzactii.NumarTranzactieColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsContDebitarNull() {
                 return this.IsNull(this.tableTranzactii.ContDebitarColumn);
             }
@@ -1159,6 +1189,18 @@ namespace Proiect_2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDescriereTranzNull() {
                 this[this.tableTranzactii.DescriereTranzColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNumarTranzactieNull() {
+                return this.IsNull(this.tableTranzactii.NumarTranzactieColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNumarTranzactieNull() {
+                this[this.tableTranzactii.NumarTranzactieColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1606,18 +1648,20 @@ namespace Proiect_2.ProiectPBDDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Suma", "Suma");
             tableMapping.ColumnMappings.Add("Data", "Data");
             tableMapping.ColumnMappings.Add("DescriereTranz", "DescriereTranz");
+            tableMapping.ColumnMappings.Add("NumarTranzactie", "NumarTranzactie");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Tranzactii] ([ContDebitar], [ContCreditor], [Suma], [Data], [D" +
-                "escriereTranz]) VALUES (@ContDebitar, @ContCreditor, @Suma, @Data, @DescriereTra" +
-                "nz)";
+                "escriereTranz], [NumarTranzactie]) VALUES (@ContDebitar, @ContCreditor, @Suma, @" +
+                "Data, @DescriereTranz, @NumarTranzactie)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContDebitar", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ContDebitar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContCreditor", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ContCreditor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Suma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Suma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DescriereTranz", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescriereTranz", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumarTranzactie", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumarTranzactie", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1633,7 +1677,8 @@ namespace Proiect_2.ProiectPBDDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ContDebitar, ContCreditor, Suma, Data, DescriereTranz FROM dbo.Tranzactii";
+            this._commandCollection[0].CommandText = "SELECT ContDebitar, ContCreditor, Suma, Data, DescriereTranz, NumarTranzactie FRO" +
+                "M dbo.Tranzactii";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1694,7 +1739,7 @@ namespace Proiect_2.ProiectPBDDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<decimal> ContDebitar, global::System.Nullable<decimal> ContCreditor, int Suma, global::System.Nullable<global::System.DateTime> Data, string DescriereTranz) {
+        public virtual int Insert(global::System.Nullable<decimal> ContDebitar, global::System.Nullable<decimal> ContCreditor, int Suma, global::System.Nullable<global::System.DateTime> Data, string DescriereTranz, global::System.Nullable<int> NumarTranzactie) {
             if ((ContDebitar.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(ContDebitar.Value));
             }
@@ -1719,6 +1764,12 @@ namespace Proiect_2.ProiectPBDDataSetTableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(DescriereTranz));
+            }
+            if ((NumarTranzactie.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(NumarTranzactie.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
