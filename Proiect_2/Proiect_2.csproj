@@ -76,6 +76,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProiectPBDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProiectPBDDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProiectPBDDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stergere.cs">
       <SubType>Form</SubType>
@@ -126,6 +131,17 @@
     </None>
     <None Include="ProiectPBDDataSet.xss">
       <DependentUpon>ProiectPBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProiectPBDDataSet1.xsc">
+      <DependentUpon>ProiectPBDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProiectPBDDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProiectPBDDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProiectPBDDataSet1.xss">
+      <DependentUpon>ProiectPBDDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

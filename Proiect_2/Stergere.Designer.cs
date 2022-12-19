@@ -53,16 +53,16 @@ namespace Proiect_2
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(330, 53);
+            this.dataGridView1.Location = new System.Drawing.Point(381, 60);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(437, 225);
+            this.dataGridView1.Size = new System.Drawing.Size(482, 240);
             this.dataGridView1.TabIndex = 1;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 429);
+            this.button2.Location = new System.Drawing.Point(47, 461);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 52);
             this.button2.TabIndex = 2;
@@ -71,7 +71,7 @@ namespace Proiect_2
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(635, 425);
+            this.button3.Location = new System.Drawing.Point(666, 461);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(174, 56);
             this.button3.TabIndex = 3;
@@ -82,7 +82,7 @@ namespace Proiect_2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(93, 339);
+            this.label1.Location = new System.Drawing.Point(105, 365);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 4;
@@ -90,7 +90,7 @@ namespace Proiect_2
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 373);
+            this.textBox1.Location = new System.Drawing.Point(189, 398);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(496, 21);
             this.textBox1.TabIndex = 5;
@@ -101,7 +101,7 @@ namespace Proiect_2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(859, 552);
+            this.ClientSize = new System.Drawing.Size(982, 589);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);

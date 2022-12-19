@@ -42,7 +42,7 @@ namespace Proiect_2
             // 
             this.button1.BackColor = System.Drawing.Color.SandyBrown;
             this.button1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(75, 156);
+            this.button1.Location = new System.Drawing.Point(75, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 59);
             this.button1.TabIndex = 0;
@@ -54,7 +54,7 @@ namespace Proiect_2
             // 
             this.button2.BackColor = System.Drawing.Color.NavajoWhite;
             this.button2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(246, 239);
+            this.button2.Location = new System.Drawing.Point(273, 274);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 54);
             this.button2.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace Proiect_2
             // 
             this.button3.BackColor = System.Drawing.Color.Bisque;
             this.button3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(75, 332);
+            this.button3.Location = new System.Drawing.Point(75, 344);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 56);
             this.button3.TabIndex = 2;
@@ -78,7 +78,7 @@ namespace Proiect_2
             // 
             this.button4.BackColor = System.Drawing.Color.SandyBrown;
             this.button4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(247, 407);
+            this.button4.Location = new System.Drawing.Point(274, 403);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(163, 60);
             this.button4.TabIndex = 3;

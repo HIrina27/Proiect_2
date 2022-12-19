@@ -82,6 +82,7 @@ namespace Proiect_2
         {
             Application.Run(new Stergere());
         }
-    
-}
+
+       
+    }
 }
