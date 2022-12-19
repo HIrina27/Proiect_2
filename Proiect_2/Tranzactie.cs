@@ -66,7 +66,7 @@ namespace Proiect_2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if ((ok == 1) || (ok1==1))
+            if ((ok == 1) || (ok1 == 1))
                 MessageBox.Show("Nu se poate face tranzactia");
             else
             {
@@ -136,6 +136,30 @@ namespace Proiect_2
                 e.Cancel = false;
                 errorProvider3.SetError(textBox3, "");
                 ok = 0;
+
+            }
+        }
+
+        private void textBox5_Validating(object sender, CancelEventArgs e)
+        {
+           
+            if (string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                e.Cancel = true;
+                textBox5.Focus();
+                errorProvider5.SetError(textBox5, "Numarul tranzactiei lipseste");
+            }else
+            if (int.Parse(textBox5.Text) > 10000)
+            {
+                MessageBox.Show("Nr tranzactie prea mare  !!");
+                ok = 1;
+
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider5.SetError(textBox5, "");
+                ok1 = 0;
 
             }
         }

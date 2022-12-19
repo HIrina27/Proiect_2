@@ -30,5 +30,10 @@ namespace Proiect_2
         {
             Application.Run(new AfisareMeniu());
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }
