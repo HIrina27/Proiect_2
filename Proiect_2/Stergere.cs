@@ -75,11 +75,6 @@ namespace Proiect_2
             DataSet ds = new DataSet();
             da.Fill(ds, "dbo.Contul");
 
-            SqlDataAdapter d = new SqlDataAdapter("Select * from dbo.Tranzactii", con);
-            DataSet s = new DataSet();
-            d.Fill(s, "dbo.Tranzactii");
-
-
             dataGridView1.DataSource = ds.Tables["dbo.Contul"].DefaultView;
         }
     }

@@ -164,6 +164,14 @@ namespace Proiect_2
             }
         }
 
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+            this.dateTimePicker1.MinDate = new DateTime(2022, 1, 1);
+            this.dateTimePicker1.MaxDate = new DateTime(2022,12,1);
+          
+        }
+
         private void textBox4_Validating(object sender, CancelEventArgs e)
         {
             string var = textBox4.Text;

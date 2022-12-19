@@ -35,7 +35,6 @@ namespace Proiect_2
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -81,6 +80,7 @@ namespace Proiect_2
             this.button3.TabIndex = 2;
             this.button3.Text = "Afisare tranzactii din data";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -90,25 +90,18 @@ namespace Proiect_2
             this.button4.TabIndex = 3;
             this.button4.Text = "Afisare tranzactii care implica conturi de tipul introdus";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(12, 339);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(195, 74);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Afiseaza bilantul initial , suma totala creditoare ,respectiv debitoare";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 436);
+            this.button6.Location = new System.Drawing.Point(12, 381);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(195, 74);
             this.button6.TabIndex = 5;
             this.button6.Text = "Afiseaza contul care apare in cele mai multe tranzactii si numar de tranzactii fa" +
     "cute";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // textBox1
             // 
@@ -124,6 +117,7 @@ namespace Proiect_2
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(268, 22);
             this.textBox3.TabIndex = 8;
+            this.textBox3.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
             // 
             // label1
             // 
@@ -205,7 +199,6 @@ namespace Proiect_2
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -228,7 +221,6 @@ namespace Proiect_2
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
